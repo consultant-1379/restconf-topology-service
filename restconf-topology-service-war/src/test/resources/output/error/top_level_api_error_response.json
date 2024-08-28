@@ -1,0 +1,13 @@
+{
+  "ietf-restconf:errors" : {
+    "error" : [ {
+      "error-type" : "protocol",
+      "error-tag" : "invalid-value",
+      "error-path" : "/invalid",
+      "error-message" : "Requested resource not found"
+    } ],
+    "error-info" : {
+      "message" : "RESTEASY003210: Could not find resource for full path: /invalid"
+    }
+  }
+}

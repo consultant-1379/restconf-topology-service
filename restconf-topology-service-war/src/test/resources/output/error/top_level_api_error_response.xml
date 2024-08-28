@@ -1,0 +1,11 @@
+<errors xmlns="urn:ietf:params:xml:ns:yang:ietf-restconf">
+    <error>
+        <error-type>protocol</error-type>
+        <error-tag>invalid-value</error-tag>
+        <error-path>/invalid</error-path>
+        <error-message>Requested resource not found</error-message>
+    </error>
+    <error-info>
+        <message>RESTEASY003210: Could not find resource for full path: /invalid</message>
+    </error-info>
+</errors>

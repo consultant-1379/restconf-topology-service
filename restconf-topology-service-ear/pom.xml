@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>restconf-topology-service</artifactId>
+        <groupId>com.ericsson.oss.services.restconf.topologyservice</groupId>
+        <version>1.5.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>restconf-topology-service-ear</artifactId>
+    <packaging>ear</packaging>
+    <name>[${project.parent.artifactId}] EAR module</name>
+
+    <properties>
+        <project.ear.Dependencies>org.slf4j,
+            com.ericsson.oss.itpf.datalayer.dps.api export,
+            com.ericsson.oss.itpf.modeling.modelservice.api meta-inf
+        </project.ear.Dependencies>
+        <project.ear.contextRoot>${project.parent.artifactId}</project.ear.contextRoot>
+        <project.war.contextRoot>/restconf</project.war.contextRoot>
+        <project.ear.defaultLibBundleDir>lib</project.ear.defaultLibBundleDir>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jboss.as.plugins</groupId>
+                <artifactId>jboss-as-maven-plugin</artifactId>
+                <configuration>
+                    <filename>${project.parent.artifactId}.${project.packaging}</filename>
+                    <skip>false</skip>
+                    <execCommands />
+                    <execute-commands />
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>${version.maven-ear-plugin}</version><!--$NO-MVN-MAN-VER$ -->
+                <configuration>
+                    <version>${version.jee}</version>
+                    <workDirectory>target/${project.parent.artifactId}-${project.version}</workDirectory>
+                    <generateApplicationXml>true</generateApplicationXml>
+                    <defaultLibBundleDir>${project.ear.defaultLibBundleDir}</defaultLibBundleDir>
+                    <description>${project.parent.artifactId} JEE8 service</description>
+                    <displayName>${project.parent.artifactId} JEE8 service</displayName>
+                    <archive>
+                        <manifestEntries>
+                            <manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
+                            <Dependencies>${project.ear.Dependencies}</Dependencies>
+                        </manifestEntries>
+                    </archive>
+                    <modules>
+                        <ejbModule>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>${project.parent.artifactId}-ejb</artifactId>
+                        </ejbModule>
+                        <ejbModule>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>overload-protection-service-ejb</artifactId>
+                        </ejbModule>
+                        <webModule>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>${project.parent.artifactId}-war</artifactId>
+                            <contextRoot>${project.war.contextRoot}</contextRoot>
+                        </webModule>
+                    </modules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>${project.parent.artifactId}-api</artifactId>
+            <version>${project.version}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>${project.parent.artifactId}-ejb</artifactId>
+            <version>${project.version}</version>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>overload-protection-service-ejb</artifactId>
+            <version>${project.version}</version>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>${project.parent.artifactId}-war</artifactId>
+            <version>${project.version}</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+</project>

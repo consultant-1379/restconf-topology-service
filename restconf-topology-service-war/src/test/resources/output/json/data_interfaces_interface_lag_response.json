@@ -1,0 +1,7 @@
+{
+  "ietf-interfaces:interface" : [ {
+    "name" : "ml6352-02:LAG-1",
+    "type" : "ieee8023adLag",
+    "enabled" : "false"
+  } ]
+}

@@ -1,0 +1,7 @@
+<mimo-groups xmlns="urn:ietf:params:xml:ns:yang:ietf-microwave-radio-link">
+    <mimo-group>
+        <name>ml6352-02:15</name>
+        <members>ml6352-02:CT-1/5/1</members>
+        <members>ml6352-02:CT-1/5/2</members>
+    </mimo-group>
+</mimo-groups>

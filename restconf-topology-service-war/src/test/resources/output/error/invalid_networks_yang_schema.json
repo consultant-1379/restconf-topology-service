@@ -1,0 +1,13 @@
+{
+  "ietf-restconf:errors" : {
+    "error" : [ {
+      "error-type" : "protocol",
+      "error-tag" : "operation-failed",
+      "error-path" : "/yang/ietf-network",
+      "error-message" : "An error occurred during operation execution"
+    } ],
+    "error-info" : {
+      "message" : "Failed to get schema: ietf-network@2000-02-26"
+    }
+  }
+}

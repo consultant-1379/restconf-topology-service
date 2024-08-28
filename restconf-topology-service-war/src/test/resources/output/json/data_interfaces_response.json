@@ -1,0 +1,146 @@
+{
+  "ietf-interfaces:interfaces" : {
+    "interface" : [ {
+      "name" : "ml6352-02:LAN-1/1/2",
+      "description" : " ",
+      "type" : "ethernetCsmacd",
+      "enabled" : "false",
+      "speed" : "10000000"
+    }, {
+      "name" : "ml6352-02:WAN-1/1/5",
+      "description" : " ",
+      "type" : "ethernetCsmacd",
+      "enabled" : "true",
+      "speed" : "12085026",
+      "lower-layer-if" : [ "ml6352-02:RLT-1/1/1" ]
+    }, {
+      "name" : "ml6352-02:LAN-1/1/1",
+      "description" : " ",
+      "type" : "ethernetCsmacd",
+      "enabled" : "false",
+      "speed" : "1000000"
+    }, {
+      "name" : "ml6352-02:LAG-2",
+      "type" : "ieee8023adLag",
+      "enabled" : "true"
+    }, {
+      "name" : "ml6352-02:LAG-1",
+      "type" : "ieee8023adLag",
+      "enabled" : "false"
+    }, {
+      "name" : "ml6352-02:LAN-1/1/4",
+      "description" : " ",
+      "type" : "ethernetCsmacd",
+      "enabled" : "true",
+      "speed" : "10000000"
+    }, {
+      "name" : "ml6352-02:RLT-1/1/1",
+      "description" : "L",
+      "type" : "microwaveRadioLinkTerminal",
+      "enabled" : "true",
+      "speed" : "12085026",
+      "id" : "6692_1/1/1",
+      "mode" : "two-plus-zero",
+      "higher-layer-if" : [ "ml6352-02:WAN-1/1/5" ],
+      "lower-layer-if" : [ "ml6352-02:CT-1/1/1", "ml6352-02:CT-1/1/2" ],
+      "carrier-terminations" : [ "ml6352-02:CT-1/1/1", "ml6352-02:CT-1/1/2" ],
+      "xpic-pairs" : [ "ml6352-02:15.1" ],
+      "mimo-groups" : [ "ml6352-02:15" ],
+      "ietf-microwave-radio-link:tdm-connections" : [ {
+        "tdm-type" : "E1",
+        "tdm-connections" : "1"
+      } ]
+    }, {
+      "name" : "ml6352-02:LAN-1/1/3",
+      "description" : " ",
+      "type" : "ethernetCsmacd",
+      "enabled" : "true",
+      "speed" : "10000000"
+    }, {
+      "name" : "ml6352-02:CT-1/1/2",
+      "type" : "microwaveCarrierTermination",
+      "enabled" : "true",
+      "speed" : "6042513",
+      "higher-layer-if" : [ "ml6352-02:RLT-1/1/1" ]
+    }, {
+      "name" : "ml6352-02:CT-1/1/1",
+      "type" : "microwaveCarrierTermination",
+      "enabled" : "true",
+      "speed" : "6042513",
+      "higher-layer-if" : [ "ml6352-02:RLT-1/1/1" ]
+    }, {
+      "name" : "ml6352-01:LAG-2",
+      "type" : "ieee8023adLag",
+      "enabled" : "true"
+    }, {
+      "name" : "ml6352-01:LAN-1/1/4",
+      "description" : " ",
+      "type" : "ethernetCsmacd",
+      "enabled" : "true",
+      "speed" : "10000000"
+    }, {
+      "name" : "ml6352-01:LAN-1/1/3",
+      "description" : " ",
+      "type" : "ethernetCsmacd",
+      "enabled" : "true",
+      "speed" : "10000000"
+    }, {
+      "name" : "ml6352-01:LAN-1/1/1",
+      "description" : " ",
+      "type" : "ethernetCsmacd",
+      "enabled" : "false",
+      "speed" : "1000000"
+    }, {
+      "name" : "ml6352-01:LAN-1/1/2",
+      "description" : " ",
+      "type" : "ethernetCsmacd",
+      "enabled" : "false",
+      "speed" : "10000000"
+    }, {
+      "name" : "ml6352-01:CT-1/1/2",
+      "type" : "microwaveCarrierTermination",
+      "enabled" : "true",
+      "speed" : "6042513",
+      "higher-layer-if" : [ "ml6352-01:RLT-1/1/1" ]
+    }, {
+      "name" : "ml6352-01:CT-1/1/1",
+      "type" : "microwaveCarrierTermination",
+      "enabled" : "true",
+      "speed" : "6042513",
+      "higher-layer-if" : [ "ml6352-01:RLT-1/1/1" ]
+    }, {
+      "name" : "ml6352-01:WAN-1/1/5",
+      "description" : " ",
+      "type" : "ethernetCsmacd",
+      "enabled" : "true",
+      "speed" : "12085026",
+      "lower-layer-if" : [ "ml6352-01:RLT-1/1/1" ]
+    }, {
+      "name" : "ml6352-01:LAG-1",
+      "type" : "ieee8023adLag",
+      "enabled" : "false"
+    }, {
+      "name" : "ml6352-01:RLT-1/1/1",
+      "description" : "L",
+      "type" : "microwaveRadioLinkTerminal",
+      "enabled" : "true",
+      "speed" : "12085026",
+      "higher-layer-if" : [ "ml6352-01:WAN-1/1/5" ],
+      "lower-layer-if" : [ "ml6352-01:CT-1/1/1", "ml6352-01:CT-1/1/2" ]
+    }, {
+      "name" : "ml6352-02:RLT-1/1/999",
+      "description" : "L",
+      "type" : "microwaveRadioLinkTerminal",
+      "enabled" : "true",
+      "speed" : "12085026",
+      "id" : "6692_1/1/1",
+      "mode" : "two-plus-zero",
+      "higher-layer-if" : [ "ml6352-02:WAN-1/1/5" ],
+      "lower-layer-if" : [ "ml6352-02:CT-1/1/1", "ml6352-02:CT-1/1/2" ],
+      "carrier-terminations" : [ "ml6352-02:CT-1/1/1" ],
+      "rlp-groups" : [ "ml6352-01:3" ],
+      "xpic-pairs" : [ "ml6352-02:15.1" ],
+      "mimo-groups" : [ "ml6352-02:15" ]
+    } ]
+  }
+}

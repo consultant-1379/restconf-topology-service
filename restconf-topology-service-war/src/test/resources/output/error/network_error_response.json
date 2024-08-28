@@ -1,0 +1,13 @@
+{
+  "ietf-restconf:errors" : {
+    "error" : [ {
+      "error-type" : "protocol",
+      "error-tag" : "bad-element",
+      "error-path" : "/data/ietf-network:networks/network=1,2",
+      "error-message" : "Value of the element node is incorrect"
+    } ],
+    "error-info" : {
+      "message" : "network=1,2; expecting 1 key(s)!"
+    }
+  }
+}

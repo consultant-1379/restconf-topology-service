@@ -1,0 +1,9 @@
+{
+  "ietf-yang-library:module" : [ {
+    "name" : "ietf-restconf",
+    "revision" : "2017-01-26",
+    "schema" : "/restconf/yang/ietf-restconf?module=ietf-restconf&amp;revision=2017-01-26",
+    "namespace" : "urn:ietf:params:xml:ns:yang:ietf-restconf",
+    "conformance-type" : "import"
+  } ]
+}

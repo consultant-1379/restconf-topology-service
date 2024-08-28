@@ -1,0 +1,20 @@
+{
+  "ietf-interfaces:interface" : [ {
+    "name" : "ml6352-02:RLT-1/1/1",
+    "description" : "L",
+    "type" : "microwaveRadioLinkTerminal",
+    "enabled" : "true",
+    "speed" : "12085026",
+    "id" : "6692_1/1/1",
+    "mode" : "two-plus-zero",
+    "higher-layer-if" : [ "ml6352-02:WAN-1/1/5" ],
+    "lower-layer-if" : [ "ml6352-02:CT-1/1/1", "ml6352-02:CT-1/1/2" ],
+    "carrier-terminations" : [ "ml6352-02:CT-1/1/1", "ml6352-02:CT-1/1/2" ],
+    "xpic-pairs" : [ "ml6352-02:15.1" ],
+    "mimo-groups" : [ "ml6352-02:15" ],
+    "ietf-microwave-radio-link:tdm-connections" : [ {
+      "tdm-type" : "E1",
+      "tdm-connections" : "1"
+    } ]
+  } ]
+}

@@ -1,0 +1,7 @@
+<module xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library">
+    <name>ietf-restconf</name>
+    <revision>2017-01-26</revision>
+    <schema>/restconf/yang/ietf-restconf?module=ietf-restconf&amp;revision=2017-01-26</schema>
+    <namespace>urn:ietf:params:xml:ns:yang:ietf-restconf</namespace>
+    <conformance-type>import</conformance-type>
+</module>

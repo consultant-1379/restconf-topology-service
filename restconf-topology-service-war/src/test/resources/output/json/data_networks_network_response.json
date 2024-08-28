@@ -1,0 +1,52 @@
+{
+  "ietf-network:network" : [ {
+    "network-id" : "1",
+    "supporting-network" : [ {
+      "network-ref" : "1"
+    } ],
+    "node" : [ {
+      "node-id" : "ml6352-02",
+      "supporting-node" : [ {
+        "network-ref" : "1",
+        "node-ref" : "ml6352-02"
+      } ],
+      "ietf-network-topology:termination-point" : [ {
+        "tp-id" : "ml6352-02_1_LAN-1/1/4",
+        "supporting-termination-point" : [ {
+          "network-ref" : "1",
+          "node-ref" : "ml6352-02",
+          "tp-ref" : "ml6352-02_1_LAN-1/1/4"
+        } ]
+      } ]
+    }, {
+      "node-id" : "ml6352-01",
+      "supporting-node" : [ {
+        "network-ref" : "1",
+        "node-ref" : "ml6352-01"
+      } ],
+      "ietf-network-topology:termination-point" : [ {
+        "tp-id" : "ml6352-01_1_LAN-1/1/4",
+        "supporting-termination-point" : [ {
+          "network-ref" : "1",
+          "node-ref" : "ml6352-01",
+          "tp-ref" : "ml6352-01_1_LAN-1/1/4"
+        } ]
+      } ]
+    } ],
+    "ietf-network-topology:link" : [ {
+      "link-id" : "Id-ml6352-02/LAN-1/1/4-ml6352-01/LAN-1/1/4",
+      "source" : {
+        "source-node" : "ml6352-02",
+        "source-tp" : "ml6352-02_1_LAN-1/1/4"
+      },
+      "destination" : {
+        "dest-node" : "ml6352-01",
+        "dest-tp" : "ml6352-01_1_LAN-1/1/4"
+      },
+      "supporting-link" : [ {
+        "network-ref" : "1",
+        "link-ref" : "Id-ml6352-02/LAN-1/1/4-ml6352-01/LAN-1/1/4"
+      } ]
+    } ]
+  } ]
+}

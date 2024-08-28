@@ -1,0 +1,34 @@
+{
+  "ietf-networks:networks": {
+    "network": [
+      {
+        "name": "local",
+        "type": "lan",
+        "errors": [
+          "error1",
+          "error2"
+        ],
+        "ietf-node:node": [
+          {
+            "name": "node123",
+            "type": "router"
+          },
+          {
+            "name": "node456",
+            "type": "switch"
+          }
+        ]
+      },
+      {
+        "name": "global",
+        "type": "wan",
+        "ietf-node:node": [
+          {
+            "name": "node789",
+            "type": "radio"
+          }
+        ]
+      }
+    ]
+  }
+}

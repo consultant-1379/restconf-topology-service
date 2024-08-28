@@ -1,0 +1,7 @@
+{
+  "capacity": 2,
+  "forceReleaseTimeout": 60000,
+  "timerRetryCount": 3,
+  "timerRetryDelay": 1000,
+  "enabled": true
+}

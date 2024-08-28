@@ -1,0 +1,7 @@
+{
+  "ietf-microwave-radio-link:xpic-pair" : [ {
+    "name" : "ml6352-01:1",
+    "enabled" : "false",
+    "members" : [ "ml6352-01:CT-1/1/1" ]
+  } ]
+}

@@ -1,0 +1,15 @@
+{
+  "ietf-network:node" : [ {
+    "node-id" : "ml6352-02",
+    "supporting-node" : [ {
+      "node-ref" : "ml6352-02"
+    } ],
+    "ietf-network-topology:termination-point" : [ {
+      "tp-id" : "ml6352-02_1_LAN-1/1/4",
+      "supporting-termination-point" : [ {
+        "node-ref" : "ml6352-02",
+        "tp-ref" : "ml6352-02_1_LAN-1/1/4"
+      } ]
+    } ]
+  } ]
+}

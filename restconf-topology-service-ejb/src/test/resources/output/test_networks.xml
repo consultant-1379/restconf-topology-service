@@ -1,0 +1,24 @@
+<networks xmlns="urn:ietf:params:xml:ns:yang:ietf-network">
+    <network>
+        <name>local</name>
+        <type>lan</type>
+        <errors>error1</errors>
+        <errors>error2</errors>
+        <node xmlns="urn:ietf:params:xml:ns:yang:ietf-node">
+            <name>node123</name>
+            <type>router</type>
+        </node>
+        <node xmlns="urn:ietf:params:xml:ns:yang:ietf-node">
+            <name>node456</name>
+            <type>switch</type>
+        </node>
+    </network>
+    <network>
+        <name>global</name>
+        <type>wan</type>
+        <node xmlns="urn:ietf:params:xml:ns:yang:ietf-node">
+            <name>node789</name>
+            <type>radio</type>
+        </node>
+    </network>
+</networks>

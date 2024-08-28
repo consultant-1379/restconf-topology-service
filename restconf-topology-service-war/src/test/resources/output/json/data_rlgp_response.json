@@ -1,0 +1,11 @@
+{
+  "ietf-microwave-radio-link:radio-link-protection-groups" : {
+    "protection-group" : [ {
+      "name" : "ml6352-01:3",
+      "protection-architecture-type" : "one-plus-one-type",
+      "operation-type" : "revertive",
+      "members" : [ "ml6352-01:CT-1/1/1" ],
+      "working-entity" : [ "ml6352-01:CT-1/1/1" ]
+    } ]
+  }
+}

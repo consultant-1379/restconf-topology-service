@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--Please Use the latest version of integration pom.xml or the one you 
+        want to reference to -->
+    <parent>
+        <groupId>com.ericsson.nms</groupId>
+        <artifactId>integration</artifactId>
+        <version>15.2.0.40</version>
+    </parent>
+
+    <groupId>com.ericsson.oss.services.restconf.topologyservice</groupId>
+    <artifactId>restconf-topology-service</artifactId>
+    <version>1.5.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <url>http://www.ericsson.com</url>
+    <organization>
+        <name>Ericsson</name>
+    </organization>
+    <prerequisites>
+        <maven>3.0.3</maven>
+    </prerequisites>
+    <name>[${project.artifactId}] JEE8 Project</name>
+
+    <properties>
+        <ericsson.scm.url>
+            scm:git:[fetch=]ssh://gerritmirror-ha.lmera.ericsson.se:29418/OSS/ENM-Parent/SQ-Gate/com.ericsson.oss.services.restconf.topologyservice/restconf-topology-service[push=]ssh://gerrit.ericsson.se:29418/OSS/ENM-Parent/SQ-Gate/com.ericsson.oss.services.restconf.topologyservice/restconf-topology-service
+        </ericsson.scm.url>
+        <!-- Do not use JBoss community version,  use EAP version. The property values of the "jboss_managed_local" profile
+            in testsuite/jee need to be updated, when this JBoss version is changed. -->
+        <version.jboss.as>7.2.8</version.jboss.as>
+        <!-- Always use the latest stable Modeling BOM Refer : https://confluence-oss.seli.wh.rnd.internal.ericsson.com/display/MS/Modeling+BOM+Release+Notes  -->
+        <version.modeling-bom>21.7.4</version.modeling-bom>
+        <!-- When you want to switch to new Service Framework version only
+             change value below. -->
+        <version.service.framework>4.25.1</version.service.framework>
+
+        <!-- DPS -->
+        <version.dps>2.105.3</version.dps>
+
+        <!-- CHECKSTYLE PLUGIN -->
+        <version.checkstyle.plugin>2.17</version.checkstyle.plugin>
+        <version.checkstyle.module>1.1.57</version.checkstyle.module>
+        <version.com.puppycrawl.tools.checkstyle>6.12.1</version.com.puppycrawl.tools.checkstyle>
+
+        <!-- PMD -->
+        <version.maven-pmd-plugin>3.7</version.maven-pmd-plugin>
+
+        <!-- Groovy Test -->
+        <version.cdi-test-support>1.1.233</version.cdi-test-support>
+        <version.groovy>2.4.9</version.groovy>
+        <version.spock>1.0-groovy-2.4</version.spock>
+        <version.spock-reports>1.2.13</version.spock-reports>
+        <version.cglib-nodep>3.1</version.cglib-nodep>
+        <version.maven.surefire>2.19.1</version.maven.surefire>
+        <version.gmaven-plugin>1.4</version.gmaven-plugin>
+        <version.gmaven-runtime-2.0>1.4</version.gmaven-runtime-2.0>
+        <version.mockito>1.9.5</version.mockito>
+        <version.jackson-databind>2.13.2.2</version.jackson-databind>
+
+        <!-- SONAR -->
+        <aggregate.report.dir>code-coverage-aggregate/target/site/jacoco-aggregate/jacoco.xml</aggregate.report.dir>
+        <sonar.language>java</sonar.language>
+        <version.jacoco>0.8.7</version.jacoco>
+
+        <!-- SONAR Exclusions -->
+        <sonar.coverage.exclusions>**/*</sonar.coverage.exclusions>
+        <sonar.cpd.exclusions>
+            **/RestconfTopologyServiceResource.java,
+            **/AbstractRestconfDataProvider.java,
+            **/InterfaceDataProvider.java
+        </sonar.cpd.exclusions>
+
+        <!-- EJB -->
+        <version.restconf-topology-service-model>1.3.1</version.restconf-topology-service-model>
+        <version.ejb>3.1</version.ejb>
+        <version.maven-ejb-plugin>3.0.1</version.maven-ejb-plugin>
+        <version.jboss-javaee-8>1.0.4.Final</version.jboss-javaee-8>
+        <version.yang-parser-jar>1.0.85</version.yang-parser-jar>
+        <version.json>20220320</version.json>
+        <version.xmlunit>1.6</version.xmlunit>
+
+        <!-- WAR -->
+        <version.maven-war-plugin>2.2</version.maven-war-plugin>
+        <version.resteasy-jaxrs>3.15.3.Final</version.resteasy-jaxrs>
+        <version.jaxrs-api>3.0.12.Final</version.jaxrs-api>
+
+        <!-- EAR -->
+        <version.maven-ear-plugin>3.0.1</version.maven-ear-plugin>
+        <version.jee>7</version.jee>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- ServiceFrameworkJBossBOM only imports the Service Framework
+               API modules and the service-framework-dist module. No Service Framework implementation
+               module is imported with this BOM. -->
+            <dependency>
+                <groupId>com.ericsson.oss.itpf.sdk</groupId>
+                <artifactId>ServiceFrameworkJBossBOM</artifactId>
+                <version>${version.service.framework}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.ericsson.oss.itpf.modeling</groupId>
+                <artifactId>Modeling-BOM</artifactId>
+                <version>${version.modeling-bom}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.ericsson.oss.itpf.sdk</groupId>
+                <artifactId>service-framework-rar</artifactId>
+                <version>${version.service.framework}</version>
+                <type>rar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.ericsson.oss.itpf.sdk</groupId>
+                <artifactId>ServiceFrameworkBOM</artifactId>
+                <version>${version.service.framework}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.ericsson.oss.itpf.datalayer.dps</groupId>
+                <artifactId>data-persistence-service-bom</artifactId>
+                <version>${version.dps}</version>
+                <type>pom</type>
+                <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.ericsson.oss.itpf.modeling</groupId>
+                        <artifactId>Modeling-BOM</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.ericsson.oss.itpf.sdk</groupId>
+                        <artifactId>ServiceFrameworkJBossBOM</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <!-- 3PP Modules -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- ServiceFramework dependencies -->
+        <dependency>
+            <groupId>com.ericsson.oss.itpf.sdk</groupId>
+            <artifactId>sdk-recording-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.oss.itpf.sdk</groupId>
+            <artifactId>sdk-licensing-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!--<dependency>
+             <groupId>com.ericsson.oss.services.lcm</groupId>
+             <artifactId>license-control-monitoring-service-api</artifactId>
+            <version>${version.license-control-monitoring-service-api}</version>
+         </dependency>-->
+        <dependency>
+            <groupId>com.ericsson.oss.itpf.sdk</groupId>
+            <artifactId>sdk-security-accesscontrol-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.oss.itpf.sdk</groupId>
+            <artifactId>sdk-resources-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.oss.itpf.sdk</groupId>
+            <artifactId>sdk-config-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.oss.itpf.sdk</groupId>
+            <artifactId>sdk-modeled-eventbus-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.oss.itpf.sdk</groupId>
+            <artifactId>sdk-eventbus-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.spockframework</groupId>
+            <artifactId>spock-core</artifactId>
+            <version>${version.spock}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+            <version>${version.cglib-nodep}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>${version.groovy}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.cds</groupId>
+            <artifactId>cdi-test-support</artifactId>
+            <version>${version.cdi-test-support}</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>dps-test-support</artifactId>
+                    <groupId>com.ericsson.oss.itpf.datalayer.dps</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.oss.itpf.datalayer.dps</groupId>
+            <artifactId>dps-test-support</artifactId>
+            <version>${version.dps}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${version.jackson-databind}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>${version.json}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>xmlunit</groupId>
+            <artifactId>xmlunit</artifactId>
+            <version>${version.xmlunit}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- SONAR -->
+        <dependency>
+            <groupId>org.jacoco</groupId>
+            <artifactId>org.jacoco.agent</artifactId>
+            <version>${version.jacoco}</version>
+            <classifier>runtime</classifier>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${version.jacoco}</version>
+                </plugin>
+
+                <!-- For Groovy Test -->
+                <plugin>
+                    <groupId>org.codehaus.gmaven</groupId>
+                    <artifactId>gmaven-plugin</artifactId>
+                    <version>${version.gmaven-plugin}</version>
+                    <configuration>
+                        <providerSelection>2.0</providerSelection>
+                        <source />
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>compile</goal>
+                                <goal>testCompile</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.codehaus.gmaven.runtime</groupId>
+                            <artifactId>gmaven-runtime-2.0</artifactId>
+                            <version>${version.gmaven-runtime-2.0}</version>
+                            <exclusions>
+                                <exclusion>
+                                    <groupId>org.codehaus.groovy</groupId>
+                                    <artifactId>groovy-all</artifactId>
+                                </exclusion>
+                            </exclusions>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.codehaus.groovy</groupId>
+                            <artifactId>groovy-all</artifactId>
+                            <version>${version.groovy}</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${version.maven.surefire}</version>
+                    <configuration>
+                        <useSystemClassLoader>true</useSystemClassLoader>
+                        <useManifestOnlyJar>false</useManifestOnlyJar>
+                        <useFile>false</useFile>
+                        <includes>
+                            <include>**/*Spec.java</include>
+                            <include>**/*Test.java</include>
+                        </includes>
+                    </configuration>
+                </plugin>
+                <!-- End For Groovy Test -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-pmd-plugin</artifactId>
+                    <version>${version.maven-pmd-plugin}</version>
+                    <configuration>
+                        <rulesets>
+                            <ruleset>
+                                https://arm1s11-eiffel004.eiffel.gic.ericsson.se:8443/nexus/service/local/repositories/3pptools/content/com/ericsson/cds/CDS_pmd_ruleset_jee/1.0/CDS_pmd_ruleset_jee-1.0.xml
+                            </ruleset>
+                        </rulesets>
+                        <targetJdk>${target.java.version}</targetJdk>
+                        <excludes>
+                            <exclude>**/src/test/*.java</exclude>
+                            <exclude>**/generated/*.java</exclude>
+                        </excludes>
+                        <excludeRoots>
+                            <excludeRoot>target/generated-sources/xjc</excludeRoot>
+                        </excludeRoots>
+                        <includeTests>false</includeTests>
+                        <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+                        <failOnViolation>false</failOnViolation>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <version>${version.checkstyle.plugin}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.puppycrawl.tools</groupId>
+                            <artifactId>checkstyle</artifactId>
+                            <version>${version.com.puppycrawl.tools.checkstyle}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>com.ericsson.cds</groupId>
+                            <artifactId>checkstyle-module</artifactId>
+                            <version>${version.checkstyle.module}</version>
+                        </dependency>
+                    </dependencies>
+                    <configuration>
+                        <consoleOutput>true</consoleOutput>
+                        <logViolationsToConsole>true</logViolationsToConsole>
+                        <configLocation>/enm/checkstyle/checkstyle.xml</configLocation>
+                        <suppressionsFileExpression>checkstyle.suppressions.file</suppressionsFileExpression>
+                        <violationSeverity>warning</violationSeverity>
+                        <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <configuration>
+                                <failsOnError>false</failsOnError>
+                            </configuration>
+                            <id>check-style</id>
+                            <phase>validate</phase>
+                            <goals>
+                                <goal>checkstyle</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>${version.maven-pmd-plugin}</version>
+                <configuration>
+                    <rulesets combine.self="override">
+                        <ruleset>
+                            https://arm1s11-eiffel004.eiffel.gic.ericsson.se:8443/nexus/service/local/repositories/releases/content/com/ericsson/nms/TOR_pmd_ruleset/1.1/TOR_pmd_ruleset-1.1.xml
+                        </ruleset>
+                    </rulesets>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${version.checkstyle.plugin}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.gmaven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <version>${version.gmaven-plugin}</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!--Deployment of versioned documentation -->
+    <distributionManagement>
+        <site>
+            <id>site</id>
+            <name>Site</name>
+            <url>${site.url}/restconf-topology-service/${project.version}</url>
+        </site>
+    </distributionManagement>
+
+    <scm>
+        <developerConnection>${ericsson.scm.url}</developerConnection>
+        <connection>${ericsson.scm.url}</connection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <modules>
+        <module>restconf-topology-service-api</module>
+        <module>overload-protection-service-api</module>
+        <module>overload-protection-service-ejb</module>
+        <module>restconf-topology-service-ejb</module>
+        <module>restconf-topology-service-war</module>
+        <module>restconf-topology-service-ear</module>
+        <module>ERICrestconftopologyservice_CXP9042251</module>
+        <module>code-coverage-aggregate</module>
+    </modules>
+
+</project>

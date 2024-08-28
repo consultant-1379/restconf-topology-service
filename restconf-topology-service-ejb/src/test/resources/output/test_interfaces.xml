@@ -1,0 +1,12 @@
+<interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+    <interface>
+        <name>1/1</name>
+        <type>lag</type>
+        <errors>error1</errors>
+        <errors>error2</errors>
+    </interface>
+    <interface>
+        <name>1/2</name>
+        <type>ethernet</type>
+    </interface>
+</interfaces>

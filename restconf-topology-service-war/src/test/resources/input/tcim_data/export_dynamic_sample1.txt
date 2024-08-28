@@ -1,0 +1,768 @@
+FDN : "Network=1"
+network-id : "1"
+network-type : <empty>
+
+
+FDN : "Network=1,Node=TN_192.168.100.102"
+consecutiveNormalizationFailures : 0
+last-norm-end-time : <empty>
+last-norm-failure-time : <empty>
+last-norm-start-time : <empty>
+lldp-sys-name : <empty>
+meRef : <empty>
+neType : MINI-LINK-Indoor
+node-id : "TN_192.168.100.102"
+normalization-state : CREATED
+
+
+FDN : "Network=1,Node=TN_192.168.100.102,Interfaces=1"
+interfaces-id : "1"
+
+
+FDN : "Network=1,Node=TN_192.168.100.101"
+consecutiveNormalizationFailures : 0
+last-norm-end-time : <empty>
+last-norm-failure-time : <empty>
+last-norm-start-time : <empty>
+lldp-sys-name : <empty>
+meRef : <empty>
+neType : MINI-LINK-Indoor
+node-id : "TN_192.168.100.101"
+normalization-state : CREATED
+
+
+FDN : "Network=1,Node=TN_192.168.100.101,Interfaces=1"
+interfaces-id : "1"
+
+
+FDN : "Network=1,Node=TN_192.168.100.104"
+consecutiveNormalizationFailures : 0
+last-norm-end-time : <empty>
+last-norm-failure-time : <empty>
+last-norm-start-time : <empty>
+lldp-sys-name : <empty>
+meRef : <empty>
+neType : MINI-LINK-Indoor
+node-id : "TN_192.168.100.104"
+normalization-state : CREATED
+
+
+FDN : "Network=1,Node=TN_192.168.100.104,Interfaces=1"
+interfaces-id : "1"
+
+
+FDN : "Network=1,Node=TN_192.168.100.103"
+consecutiveNormalizationFailures : 0
+last-norm-end-time : <empty>
+last-norm-failure-time : <empty>
+last-norm-start-time : <empty>
+lldp-sys-name : <empty>
+meRef : <empty>
+neType : MINI-LINK-Indoor
+node-id : "TN_192.168.100.103"
+normalization-state : CREATED
+
+
+FDN : "Network=1,Node=TN_192.168.100.103,Interfaces=1"
+interfaces-id : "1"
+
+
+FDN : "Network=1,Node=TN_192.168.100.65"
+consecutiveNormalizationFailures : 0
+last-norm-end-time : <empty>
+last-norm-failure-time : <empty>
+last-norm-start-time : <empty>
+lldp-sys-name : <empty>
+meRef : <empty>
+neType : MINI-LINK-Indoor
+node-id : "TN_192.168.100.65"
+normalization-state : CREATED
+
+
+FDN : "Network=1,Node=TN_192.168.100.65,Interfaces=1"
+interfaces-id : "1"
+
+
+FDN : "Network=1,Node=TN_192.168.100.66"
+consecutiveNormalizationFailures : 0
+last-norm-end-time : <empty>
+last-norm-failure-time : <empty>
+last-norm-start-time : <empty>
+lldp-sys-name : <empty>
+meRef : <empty>
+neType : MINI-LINK-Indoor
+node-id : "TN_192.168.100.66"
+normalization-state : CREATED
+
+
+FDN : "Network=1,Node=TN_192.168.100.66,Interfaces=1"
+interfaces-id : "1"
+
+
+FDN : "Network=1,Link=Id-ml6352-02/LAN-1/1/4-ml6352-01/LAN-1/1/4"
+active : true
+alarm-status : CLEARED
+created-by : "System"
+creation-date : "Mon Nov 15 07:48:32 GMT 2021"
+description : <empty>
+dest-tp : "Network=1,Node=ml6352-01,TerminationPoint=ml6352-01_1_LAN-1/1/4"
+discovery-state : DISCOVERED
+layer-rate : ETHERNET_10Gb
+link-id : "Id-ml6352-02/LAN-1/1/4-ml6352-01/LAN-1/1/4"
+link-name : "ml6352-02/LAN-1/1/4-ml6352-01/LAN-1/1/4"
+link-state : DEFINED
+sdn-applicable : <empty>
+sdn-populated : <empty>
+source-tp : "Network=1,Node=ml6352-02,TerminationPoint=ml6352-02_1_LAN-1/1/4"
+supported-links : <empty>
+supporting-links : <empty>
+supporting-links-layer-rate : <empty>
+supporting-links-number : <empty>
+type : NOT_AVAILABLE
+
+
+FDN : "Network=1,Node=ml6352-02"
+consecutiveNormalizationFailures : 0
+last-norm-end-time : "Mon Nov 15 07:48:31 GMT 2021"
+last-norm-failure-time : <empty>
+last-norm-start-time : "Mon Nov 15 07:48:31 GMT 2021"
+lldp-sys-name : "ML6352[10-223-200-168]"
+meRef : "SubNetwork=Core,ManagedElement=ml6352-02"
+neType : MINI-LINK-6352
+node-id : "ml6352-02"
+normalization-state : NORMALIZED
+
+
+FDN : "Network=1,Node=ml6352-02,TerminationPoint=ml6352-02_1_LAN-1/1/4"
+if-ref : "Network=1,Node=ml6352-02,Interfaces=1,Interface=LAN-1/1/4"
+link : "Network=1,Link=Id-ml6352-02/LAN-1/1/4-ml6352-01/LAN-1/1/4"
+tp-id : "ml6352-02_1_LAN-1/1/4"
+
+
+FDN : "Network=1,Node=ml6352-02,XpicPairs=1"
+id : "1"
+
+
+FDN : "Network=1,Node=ml6352-02,XpicPairs=1,XpicPair=1"
+enable : false
+name : "1"
+xpic-members : Network=1,Node=ml6352-02,Interfaces=1,Interface=CT-1/1/1,CarrierTermination=1
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1"
+interfaces-id : "1"
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=LAN-1/1/2"
+alarm-status : UNKNOWN
+description : " "
+enabled : false
+higher-layer-if : <empty>
+layer-rate : ETHERNET_10Gb
+link-tp : <empty>
+link-type : NOT_AVAILABLE
+lower-layer-if : <empty>
+name : "LAN-1/1/2"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-02,Transport=1,Interfaces=1,Interface=LAN-1/1/2"
+speed : 10000000
+type : ethernetCsmacd
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=LAN-1/1/2,Ethernet=1"
+auto-negotiate : true
+duplex : FULL
+ethernet-id : "1"
+link-group : <empty>
+mtu : 1536
+speed : 1GB
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=WAN-1/1/5"
+alarm-status : UNKNOWN
+description : " "
+enabled : true
+higher-layer-if : <empty>
+layer-rate : WAN
+link-tp : <empty>
+link-type : ENCAPSULATION
+lower-layer-if : ["Network=1,Node=ml6352-02,Interfaces=1,Interface=RLT-1/1/1"]
+name : "WAN-1/1/5"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-02,Transport=1,Interfaces=1,Interface=WAN-1/1/5"
+speed : 12085026
+type : ethernetCsmacd
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=WAN-1/1/5,Ethernet=1"
+auto-negotiate : <empty>
+duplex : FULL
+ethernet-id : "1"
+link-group : <empty>
+mtu : 9216
+speed : UNDEFINED
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=LAN-1/1/1"
+alarm-status : UNKNOWN
+description : " "
+enabled : false
+higher-layer-if : <empty>
+layer-rate : ETHERNET_1Gb
+link-tp : <empty>
+link-type : ELECTRICAL
+lower-layer-if : <empty>
+name : "LAN-1/1/1"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-02,Transport=1,Interfaces=1,Interface=LAN-1/1/1"
+speed : 1000000
+type : ethernetCsmacd
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=LAN-1/1/1,Ethernet=1"
+auto-negotiate : true
+duplex : FULL
+ethernet-id : "1"
+link-group : <empty>
+mtu : 1536
+speed : 1GB
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=LAG-2"
+alarm-status : UNKNOWN
+description : <empty>
+enabled : true
+higher-layer-if : <empty>
+layer-rate : UNDEFINED
+link-tp : <empty>
+link-type : AGGREGATION
+lower-layer-if : <empty>
+name : "LAG-2"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-02,Transport=1,Interfaces=1,Interface=LAG-2"
+speed : <empty>
+type : ieee8023adLag
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=LAG-2,LinkGroup=1"
+bonding-mode : <empty>
+lacp-enabled : true
+linkGroup-id : "1"
+members-layer-rate : UNDEFINED
+members-number : <empty>
+mtu : <empty>
+slave-if : <empty>
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=LAG-1"
+alarm-status : UNKNOWN
+description : <empty>
+enabled : false
+higher-layer-if : <empty>
+layer-rate : UNDEFINED
+link-tp : <empty>
+link-type : AGGREGATION
+lower-layer-if : <empty>
+name : "LAG-1"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-02,Transport=1,Interfaces=1,Interface=LAG-1"
+speed : <empty>
+type : ieee8023adLag
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=LAG-1,LinkGroup=1"
+bonding-mode : <empty>
+lacp-enabled : true
+linkGroup-id : "1"
+members-layer-rate : UNDEFINED
+members-number : <empty>
+mtu : <empty>
+slave-if : <empty>
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=LAN-1/1/4"
+alarm-status : UNKNOWN
+description : " "
+enabled : true
+higher-layer-if : <empty>
+layer-rate : ETHERNET_10Gb
+link-tp : "Network=1,Node=ml6352-02,TerminationPoint=ml6352-02_1_LAN-1/1/4"
+link-type : NOT_AVAILABLE
+lower-layer-if : <empty>
+name : "LAN-1/1/4"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-02,Transport=1,Interfaces=1,Interface=LAN-1/1/4"
+speed : 10000000
+type : ethernetCsmacd
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=LAN-1/1/4,Ethernet=1"
+auto-negotiate : true
+duplex : FULL
+ethernet-id : "1"
+link-group : <empty>
+mtu : 1536
+speed : 1GB
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=LAN-1/1/4,Ethernet=1,LldpData=1"
+id : "1"
+lldp-admin-status : TX_AND_RX
+local-port-id : "1/1/4"
+remote-port-id : "1/1/4"
+remote-sys-name : "ML6352[10-223-200-168]"
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=RLT-1/1/1"
+alarm-status : UNKNOWN
+description : "L"
+enabled : true
+higher-layer-if : ["Network=1,Node=ml6352-02,Interfaces=1,Interface=WAN-1/1/5"]
+layer-rate : RADIO_LINK_TERMINAL
+link-tp : <empty>
+link-type : RADIO_BONDING
+lower-layer-if : ["Network=1,Node=ml6352-02,Interfaces=1,Interface=CT-1/1/1", "Network=1,Node=ml6352-02,Interfaces=1,Interface=CT-1/1/2"]
+name : "RLT-1/1/1"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-02,Transport=1,Interfaces=1,Interface=RLT-1/1/1"
+speed : 12085026
+type : radioLinkTerminal
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=LAN-1/1/3"
+alarm-status : UNKNOWN
+description : " "
+enabled : true
+higher-layer-if : <empty>
+layer-rate : ETHERNET_10Gb
+link-tp : <empty>
+link-type : NOT_AVAILABLE
+lower-layer-if : <empty>
+name : "LAN-1/1/3"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-02,Transport=1,Interfaces=1,Interface=LAN-1/1/3"
+speed : 10000000
+type : ethernetCsmacd
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=LAN-1/1/3,Ethernet=1"
+auto-negotiate : true
+duplex : FULL
+ethernet-id : "1"
+link-group : <empty>
+mtu : 1536
+speed : 1GB
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=CT-1/1/2"
+alarm-status : UNKNOWN
+description : <empty>
+enabled : true
+higher-layer-if : ["Network=1,Node=ml6352-02,Interfaces=1,Interface=RLT-1/1/1"]
+layer-rate : RADIO_CARRIER
+link-tp : <empty>
+link-type : RADIO
+lower-layer-if : <empty>
+name : "CT-1/1/2"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-02,Transport=1,Interfaces=1,Interface=CT-1/1/2"
+speed : 6042513
+type : carrierTermination
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=CT-1/1/2,CarrierTermination=1"
+carrier-id : "B"
+carrierTermination-id : "1"
+channel-separation : 1000000.0
+coding-modulation-mode : <empty>
+ct-distinguished-name : <empty>
+duplex-distance : 0
+far-end-ct-distinguished-name : <empty>
+polarization : NOT_SPECIFIED
+rx-frequency : 82875000
+rx-frequency-config : true
+selected-cm : QAM-256
+selected-max-acm : QAM-256
+selected-min-acm : HALF-BPSK
+tx-enabled : true
+tx-frequency : 72875000
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=CT-1/1/1"
+alarm-status : UNKNOWN
+description : <empty>
+enabled : true
+higher-layer-if : ["Network=1,Node=ml6352-02,Interfaces=1,Interface=RLT-1/1/1"]
+layer-rate : RADIO_CARRIER
+link-tp : <empty>
+link-type : RADIO
+lower-layer-if : <empty>
+name : "CT-1/1/1"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-02,Transport=1,Interfaces=1,Interface=CT-1/1/1"
+speed : 6042513
+type : carrierTermination
+
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=CT-1/1/1,CarrierTermination=1"
+carrier-id : "A"
+carrierTermination-id : "1"
+channel-separation : 1000000.0
+coding-modulation-mode : ADAPTIVE
+ct-distinguished-name : "1/1/2"
+duplex-distance : 0
+far-end-ct-distinguished-name : <empty>
+polarization : NOT_SPECIFIED
+rx-frequency : 81875000
+rx-frequency-config : true
+selected-cm : QAM-256
+selected-max-acm : QAM-256
+selected-min-acm : HALF-BPSK
+tx-enabled : true
+tx-frequency : 71875000
+
+
+FDN : "Network=1,Node=ml6352-01"
+consecutiveNormalizationFailures : 0
+last-norm-end-time : "Mon Nov 15 07:48:31 GMT 2021"
+last-norm-failure-time : <empty>
+last-norm-start-time : "Mon Nov 15 07:48:30 GMT 2021"
+lldp-sys-name : "ML6352[10-223-200-168]"
+meRef : "SubNetwork=Core,ManagedElement=ml6352-01"
+neType : MINI-LINK-6352
+node-id : "ml6352-01"
+normalization-state : NORMALIZED
+
+
+FDN : "Network=1,Node=ml6352-01,TerminationPoint=ml6352-01_1_LAN-1/1/4"
+if-ref : "Network=1,Node=ml6352-01,Interfaces=1,Interface=LAN-1/1/4"
+link : "Network=1,Link=Id-ml6352-02/LAN-1/1/4-ml6352-01/LAN-1/1/4"
+tp-id : "ml6352-01_1_LAN-1/1/4"
+
+
+FDN : "Network=1,Node=ml6352-01,XpicPairs=1"
+id : "1"
+
+
+FDN : "Network=1,Node=ml6352-01,XpicPairs=1,XpicPair=1"
+enable : false
+name : "1"
+xpic-members : Network=1,Node=ml6352-01,Interfaces=1,Interface=CT-1/1/1,CarrierTermination=1
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1"
+interfaces-id : "1"
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=LAG-2"
+alarm-status : UNKNOWN
+description : <empty>
+enabled : true
+higher-layer-if : <empty>
+layer-rate : UNDEFINED
+link-tp : <empty>
+link-type : AGGREGATION
+lower-layer-if : <empty>
+name : "LAG-2"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-01,Transport=1,Interfaces=1,Interface=LAG-2"
+speed : <empty>
+type : ieee8023adLag
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=LAG-2,LinkGroup=1"
+bonding-mode : <empty>
+lacp-enabled : true
+linkGroup-id : "1"
+members-layer-rate : UNDEFINED
+members-number : <empty>
+mtu : <empty>
+slave-if : <empty>
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=LAN-1/1/4"
+alarm-status : UNKNOWN
+description : " "
+enabled : true
+higher-layer-if : <empty>
+layer-rate : ETHERNET_10Gb
+link-tp : "Network=1,Node=ml6352-01,TerminationPoint=ml6352-01_1_LAN-1/1/4"
+link-type : NOT_AVAILABLE
+lower-layer-if : <empty>
+name : "LAN-1/1/4"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-01,Transport=1,Interfaces=1,Interface=LAN-1/1/4"
+speed : 10000000
+type : ethernetCsmacd
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=LAN-1/1/4,Ethernet=1"
+auto-negotiate : true
+duplex : FULL
+ethernet-id : "1"
+link-group : <empty>
+mtu : 1536
+speed : 1GB
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=LAN-1/1/4,Ethernet=1,LldpData=1"
+id : "1"
+lldp-admin-status : TX_AND_RX
+local-port-id : "1/1/4"
+remote-port-id : "1/1/4"
+remote-sys-name : "ML6352[10-223-200-169]"
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=LAN-1/1/3"
+alarm-status : UNKNOWN
+description : " "
+enabled : true
+higher-layer-if : <empty>
+layer-rate : ETHERNET_10Gb
+link-tp : <empty>
+link-type : NOT_AVAILABLE
+lower-layer-if : <empty>
+name : "LAN-1/1/3"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-01,Transport=1,Interfaces=1,Interface=LAN-1/1/3"
+speed : 10000000
+type : ethernetCsmacd
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=LAN-1/1/3,Ethernet=1"
+auto-negotiate : true
+duplex : FULL
+ethernet-id : "1"
+link-group : <empty>
+mtu : 1536
+speed : 1GB
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=LAN-1/1/1"
+alarm-status : UNKNOWN
+description : " "
+enabled : false
+higher-layer-if : <empty>
+layer-rate : ETHERNET_1Gb
+link-tp : <empty>
+link-type : ELECTRICAL
+lower-layer-if : <empty>
+name : "LAN-1/1/1"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-01,Transport=1,Interfaces=1,Interface=LAN-1/1/1"
+speed : 1000000
+type : ethernetCsmacd
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=LAN-1/1/1,Ethernet=1"
+auto-negotiate : true
+duplex : FULL
+ethernet-id : "1"
+link-group : <empty>
+mtu : 1536
+speed : 1GB
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=LAN-1/1/2"
+alarm-status : UNKNOWN
+description : " "
+enabled : false
+higher-layer-if : <empty>
+layer-rate : ETHERNET_10Gb
+link-tp : <empty>
+link-type : NOT_AVAILABLE
+lower-layer-if : <empty>
+name : "LAN-1/1/2"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-01,Transport=1,Interfaces=1,Interface=LAN-1/1/2"
+speed : 10000000
+type : ethernetCsmacd
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=LAN-1/1/2,Ethernet=1"
+auto-negotiate : true
+duplex : FULL
+ethernet-id : "1"
+link-group : <empty>
+mtu : 1536
+speed : 1GB
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=CT-1/1/2"
+alarm-status : UNKNOWN
+description : <empty>
+enabled : true
+higher-layer-if : ["Network=1,Node=ml6352-01,Interfaces=1,Interface=RLT-1/1/1"]
+layer-rate : RADIO_CARRIER
+link-tp : <empty>
+link-type : RADIO
+lower-layer-if : <empty>
+name : "CT-1/1/2"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-01,Transport=1,Interfaces=1,Interface=CT-1/1/2"
+speed : 6042513
+type : carrierTermination
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=CT-1/1/2,CarrierTermination=1"
+carrier-id : "B"
+carrierTermination-id : "1"
+channel-separation : 1000000.0
+coding-modulation-mode : <empty>
+ct-distinguished-name : <empty>
+duplex-distance : 0
+far-end-ct-distinguished-name : <empty>
+polarization : NOT_SPECIFIED
+rx-frequency : 82875000
+rx-frequency-config : true
+selected-cm : QAM-256
+selected-max-acm : QAM-256
+selected-min-acm : HALF-BPSK
+tx-enabled : true
+tx-frequency : 72875000
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=CT-1/1/1"
+alarm-status : UNKNOWN
+description : <empty>
+enabled : true
+higher-layer-if : ["Network=1,Node=ml6352-01,Interfaces=1,Interface=RLT-1/1/1"]
+layer-rate : RADIO_CARRIER
+link-tp : <empty>
+link-type : RADIO
+lower-layer-if : <empty>
+name : "CT-1/1/1"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-01,Transport=1,Interfaces=1,Interface=CT-1/1/1"
+speed : 6042513
+type : carrierTermination
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=CT-1/1/1,CarrierTermination=1"
+carrier-id : "A"
+carrierTermination-id : "1"
+channel-separation : 1000000.0
+coding-modulation-mode : ADAPTIVE
+ct-distinguished-name : "1/1/1"
+duplex-distance : 0
+far-end-ct-distinguished-name : <empty>
+polarization : NOT_SPECIFIED
+rx-frequency : 81875000
+rx-frequency-config : true
+selected-cm : QAM-256
+selected-max-acm : QAM-256
+selected-min-acm : HALF-BPSK
+tx-enabled : true
+tx-frequency : 71875000
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=WAN-1/1/5"
+alarm-status : UNKNOWN
+description : " "
+enabled : true
+higher-layer-if : <empty>
+layer-rate : WAN
+link-tp : <empty>
+link-type : ENCAPSULATION
+lower-layer-if : ["Network=1,Node=ml6352-01,Interfaces=1,Interface=RLT-1/1/1"]
+name : "WAN-1/1/5"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-01,Transport=1,Interfaces=1,Interface=WAN-1/1/5"
+speed : 12085026
+type : ethernetCsmacd
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=WAN-1/1/5,Ethernet=1"
+auto-negotiate : <empty>
+duplex : FULL
+ethernet-id : "1"
+link-group : <empty>
+mtu : 9216
+speed : UNDEFINED
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=LAG-1"
+alarm-status : UNKNOWN
+description : <empty>
+enabled : false
+higher-layer-if : <empty>
+layer-rate : UNDEFINED
+link-tp : <empty>
+link-type : AGGREGATION
+lower-layer-if : <empty>
+name : "LAG-1"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-01,Transport=1,Interfaces=1,Interface=LAG-1"
+speed : <empty>
+type : ieee8023adLag
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=LAG-1,LinkGroup=1"
+bonding-mode : <empty>
+lacp-enabled : true
+linkGroup-id : "1"
+members-layer-rate : UNDEFINED
+members-number : <empty>
+mtu : <empty>
+slave-if : <empty>
+
+
+FDN : "Network=1,Node=ml6352-01,Interfaces=1,Interface=RLT-1/1/1"
+alarm-status : UNKNOWN
+description : "L"
+enabled : true
+higher-layer-if : ["Network=1,Node=ml6352-01,Interfaces=1,Interface=WAN-1/1/5"]
+layer-rate : RADIO_LINK_TERMINAL
+link-tp : <empty>
+link-type : RADIO_BONDING
+lower-layer-if : ["Network=1,Node=ml6352-01,Interfaces=1,Interface=CT-1/1/1", "Network=1,Node=ml6352-01,Interfaces=1,Interface=CT-1/1/2"]
+name : "RLT-1/1/1"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-01,Transport=1,Interfaces=1,Interface=RLT-1/1/1"
+speed : 12085026
+type : radioLinkTerminal
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=RLT-1/1/1,RadioLinkTerminal=1"
+carrier-terminations : "Network=1,Node=ml6352-02,Interfaces=1,Interface=CT-1/1/1,CarrierTermination=1;Network=1,Node=ml6352-02,Interfaces=1,Interface=CT-1/1/2,CarrierTermination=1"
+far-end-node-name : "ML6694-210-135"
+far-end-terminal-Id : "6694_1/1/1-1/1/1"
+far-end-terminal-id : "6694_1/1/1"
+mimo-group : "Network=1,Node=ml6352-02,MimoGroups=1,MimoGroup=15"
+mode : TWO-PLUS-ZERO
+node-name : "ML6692-CS-PE"
+radioLinkTerminal-id : "1"
+rlp-groups : <empty>
+tdm-connection : [Network=1,Node=ml6352-02,Interfaces=1,Interface=RLT-1/1/1,RadioLinkTerminal=1,TdmConnections=1]
+terminal-Id : "6692_1/1/1-1/1/1"
+terminal-id : "6692_1/1/1"
+xpic-pairs : ["Network=1,Node=ml6352-02,XpicPairs=1,XpicPair=15.1"]
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=RLT-1/1/999"
+alarm-status : UNKNOWN
+description : "L"
+enabled : true
+higher-layer-if : ["Network=1,Node=ml6352-02,Interfaces=1,Interface=WAN-1/1/5"]
+layer-rate : RADIO_LINK_TERMINAL
+link-tp : <empty>
+link-type : RADIO_BONDING
+lower-layer-if : ["Network=1,Node=ml6352-02,Interfaces=1,Interface=CT-1/1/1", "Network=1,Node=ml6352-02,Interfaces=1,Interface=CT-1/1/2"]
+name : "RLT-1/1/999"
+node-if-name : "SubNetwork=Core,ManagedElement=ml6352-02,Transport=1,Interfaces=1,Interface=RLT-1/1/999"
+speed : 12085026
+type : radioLinkTerminal
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=RLT-1/1/999,RadioLinkTerminal=1"
+carrier-terminations : "Network=1,Node=ml6352-02,Interfaces=1,Interface=CT-1/1/1,CarrierTermination=1
+far-end-node-name : "ML6694-210-135"
+far-end-terminal-Id : "6694_1/1/1-1/1/1"
+far-end-terminal-id : "6694_1/1/1"
+mimo-group : "Network=1,Node=ml6352-02,MimoGroups=1,MimoGroup=15"
+mode : TWO-PLUS-ZERO
+node-name : "ML6692-CS-PE"
+radioLinkTerminal-id : "1"
+rlp-groups : ["Network=1,Node=ml6352-01,RadioLinkProtectionGroups=1,RadioLinkProtectionGroup=3"]
+tdm-connection : [Network=1,Node=ml6352-02,Interfaces=1,Interface=RLT-1/1/999,RadioLinkTerminal=1,TdmConnections=1]
+terminal-Id : "6692_1/1/1-1/1/1"
+terminal-id : "6692_1/1/1"
+xpic-pairs : ["Network=1,Node=ml6352-02,XpicPairs=1,XpicPair=15.1"]
+
+FDN : "Network=1,Node=ml6352-02,Interfaces=1,Interface=RLT-1/1/1,RadioLinkTerminal=1,TdmConnections=1"
+connections : 1
+tdmConnection-id : "1"
+type : E1
+
+FDN : Network=1,Node=ml6352-01,RadioLinkProtectionGroups=1,RadioLinkProtectionGroup=3
+name : 3
+operation-type : REVERTIVE
+protection-type : ONE-PLUS-ONE
+rl-protection-member : [Network=1,Node=ml6352-01,Interfaces=1,Interface=CT-1/1/1,CarrierTermination=1, Network=1,Node=nodeMINILINK6638,Interfaces=1,Interface=CT-1/1/2,CarrierTermination=1]
+working-entity : [Network=1,Node=ml6352-01,Interfaces=1,Interface=CT-1/1/1,CarrierTermination=1]
+
+FDN : "Network=1,Node=ml6352-02,MimoGroups=1"
+id : "1"
+
+
+FDN : "Network=1,Node=ml6352-02,MimoGroups=1,MimoGroup=15"
+enable : <empty>
+mimo-members : Network=1,Node=ml6352-02,Interfaces=1,Interface=CT-1/5/1,CarrierTermination=1;Network=1,Node=ml6352-02,Interfaces=1,Interface=CT-1/5/2,CarrierTermination=1
+name : "15"

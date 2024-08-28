@@ -1,0 +1,18 @@
+{
+  "ietf-interfaces:interfaces": {
+    "interface": [
+      {
+        "name": "1/1",
+        "type": "lag",
+        "errors": [
+          "error1",
+          "error2"
+        ]
+      },
+      {
+        "name": "1/2",
+        "type": "ethernet"
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+<xpic-pair xmlns="urn:ietf:params:xml:ns:yang:ietf-microwave-radio-link">
+    <name>ml6352-02:1</name>
+    <enabled>false</enabled>
+    <members>ml6352-02:CT-1/1/1</members>
+</xpic-pair>

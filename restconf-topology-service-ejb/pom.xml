@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>restconf-topology-service</artifactId>
+        <groupId>com.ericsson.oss.services.restconf.topologyservice</groupId>
+        <version>1.5.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>restconf-topology-service-ejb</artifactId>
+    <packaging>ejb</packaging>
+
+    <name>[${project.parent.artifactId}] EJB module</name>
+    <properties>
+        <sonar.coverage.jacoco.xmlReportPaths>${basedir}/../${aggregate.report.dir}</sonar.coverage.jacoco.xmlReportPaths>
+    </properties>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <!-- This plugin generates J2EE Enterprise Javabean (EJB) file
+                as well as the associated client jar. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ejb-plugin</artifactId>
+                <version>${version.maven-ejb-plugin}</version>
+                <configuration>
+                    <ejbVersion>${version.ejb}</ejbVersion>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>${project.parent.artifactId}-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>overload-protection-service-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>overload-protection-service-ejb</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- Basic dependency for JEE applications, as defined in Java EE
+               Specification APIs -->
+        <dependency>
+            <groupId>org.jboss.spec</groupId>
+            <artifactId>jboss-javaee-8.0</artifactId>
+            <version>${version.jboss-javaee-8}</version>
+            <type>pom</type>
+            <scope>provided</scope><!-- POM used as an aggregator -->
+        </dependency>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.oss.mediation.modeling.yangtools</groupId>
+            <artifactId>yang-parser-jar</artifactId>
+            <version>${version.yang-parser-jar}</version>
+        </dependency>
+
+        <!-- Common Modules -->
+        <dependency>
+            <groupId>com.ericsson.oss.itpf.modeling</groupId>
+            <artifactId>model-service-api-jar</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.oss.itpf.datalayer.dps</groupId>
+            <artifactId>dps-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Model JARs -->
+        <dependency>
+            <groupId>com.ericsson.oss.services.restconf.topologyservice</groupId>
+            <artifactId>restconf-topology-service-model-jar</artifactId>
+            <version>${version.restconf-topology-service-model}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.ericsson.oss.itpf.modeling.tools</groupId>
+                    <artifactId>modeling-annotation-processor-jar</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.oss.services.restconf.topologyservice</groupId>
+            <artifactId>restconf-topology-service-model-yang</artifactId>
+            <version>${version.restconf-topology-service-model}</version>
+        </dependency>
+    </dependencies>
+</project>

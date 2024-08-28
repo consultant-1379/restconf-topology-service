@@ -1,0 +1,16 @@
+{
+  "ietf-network-topology:link" : [ {
+    "link-id" : "Id-ml6352-02/LAN-1/1/4-ml6352-01/LAN-1/1/4",
+    "source" : {
+      "source-node" : "ml6352-02",
+      "source-tp" : "ml6352-02_1_LAN-1/1/4"
+    },
+    "destination" : {
+      "dest-node" : "ml6352-01",
+      "dest-tp" : "ml6352-01_1_LAN-1/1/4"
+    },
+    "supporting-link" : [ {
+      "link-ref" : "Id-ml6352-02/LAN-1/1/4-ml6352-01/LAN-1/1/4"
+    } ]
+  } ]
+}

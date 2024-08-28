@@ -1,0 +1,29 @@
+# Vim swap files.
+*.swp
+
+# IntelliJ IDEA project files.
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Eclipse project files.
+.settings/
+.project
+.classpath
+.metadata
+bin/
+classes/
+target/
+
+# Maven build directory.
+target/
+# Maven release plugin
+*.releaseBackup
+release.properties
+
+#Others
+*.*~
+*.orig
+.pmd
+.checkstyle

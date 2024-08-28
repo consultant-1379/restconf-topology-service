@@ -1,0 +1,8 @@
+{
+  "ietf-network-topology:termination-point" : [ {
+    "tp-id" : "ml6352-02_1_LAN-1/1/4",
+    "supporting-termination-point" : [ {
+      "tp-ref" : "ml6352-02_1_LAN-1/1/4"
+    } ]
+  } ]
+}
